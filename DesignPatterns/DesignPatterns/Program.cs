@@ -6,10 +6,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static DesignPatterns.SOLID.DependencyInversionPrinciple.DependencyInversionPrinciple;
+
 namespace DesignPatterns
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             #region //////////////////////////////////////SOLID Principle//////////////////////////////////////
@@ -57,17 +60,17 @@ namespace DesignPatterns
 
             Console.WriteLine("Green products(New) :");
             var newFilter = new NewFilter();
-            foreach(Product product in newFilter.Filter(products,new ColorSpecification(Color.Green)))
+            foreach (Product product in newFilter.Filter(products, new ColorSpecification(Color.Green)))
             {
                 Console.WriteLine($"-{product.name} is is green");
             }
 
             Console.WriteLine("Small and Green products(New) :");
-            foreach(var product in newFilter.Filter(products,new AndSpecification<Product>(
+            foreach (var product in newFilter.Filter(products, new AndSpecification<Product>(
                 new ColorSpecification(Color.Green),
                 new SizeSpecification(Size.small)
                 )))
-                {
+            {
                 Console.WriteLine($"-{product.name} is is green");
             }
             #endregion
@@ -84,6 +87,17 @@ namespace DesignPatterns
 
             #region 5 Dependency inversion principle
             /********************Dependency inversion principle********************/
+            Console.WriteLine("********************Dependency inversion principle********************");
+
+
+            var parent = new Person { name = "Soniya Gandhi" };
+            var child1 = new Person { name = "Rahul Gandhi" };
+            var child2 = new Person { name = "Priyanka Gandhi" };
+
+            var relationships = new Relaionships();
+            relationships.AddParentAndChild(parent, child1);
+            relationships.AddParentAndChild(parent, child2);
+            Research research = new Research(relationships);
 
             #endregion
             #endregion Solid
