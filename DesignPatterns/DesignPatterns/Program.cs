@@ -1,4 +1,5 @@
-﻿using DesignPatterns.SOLID.OpenClosedPrinciple;
+﻿using DesignPatterns.SOLID.LiskovSubstitutionPrinciple;
+using DesignPatterns.SOLID.OpenClosedPrinciple;
 using DesignPatterns.SOLID.SingleResponsibilityPrinciple;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ namespace DesignPatterns
 {
     class Program
     {
+        public static int Area(Rectangle r) => r.Width * r.Height;
 
         static void Main(string[] args)
         {
@@ -77,7 +79,14 @@ namespace DesignPatterns
 
             #region 3 Liskov substitution principle
             /********************Liskov substitution principle********************/
+            Console.WriteLine("********************Liskov substitution principle********************");
+            Rectangle rectangle = new Rectangle(2,3);
+            Console.WriteLine($"{rectangle} has area {Area(rectangle)}");
 
+            //Square square = new Square();
+            Rectangle square = new Square();
+            square.Width = 5;
+            Console.WriteLine($"{square} has area {Area(square)}");
             #endregion
 
             #region 4 Interface segregation principle
@@ -88,8 +97,6 @@ namespace DesignPatterns
             #region 5 Dependency inversion principle
             /********************Dependency inversion principle********************/
             Console.WriteLine("********************Dependency inversion principle********************");
-
-
             var parent = new Person { name = "Soniya Gandhi" };
             var child1 = new Person { name = "Rahul Gandhi" };
             var child2 = new Person { name = "Priyanka Gandhi" };
