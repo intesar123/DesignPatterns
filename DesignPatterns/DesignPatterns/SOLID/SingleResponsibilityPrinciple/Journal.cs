@@ -9,6 +9,11 @@ namespace DesignPatterns.SOLID.SingleResponsibilityPrinciple
 {
     public class Journal
     {
+        //A class should have only one reason to change
+        //Every module or class should have resposibility over a single part of the functionality provided by the software
+        //and that resposibility should be entirly encapsulated by the class
+        // feaures- Maintainablity, testablity and flexiblity , extensiblity, loose coupling and parallel development all the fearurs can be served by following SOLID
+
         private readonly List<string> entries = new List<string>();
         private static int count = 0;
 

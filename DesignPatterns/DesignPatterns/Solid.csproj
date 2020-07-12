@@ -53,6 +53,7 @@
     <Compile Include="SOLID\InterfaceSegregationPrinciple\DocumentNew.cs" />
     <Compile Include="SOLID\LiskovSubstitutionPrinciple\Rectangle.cs" />
     <Compile Include="SOLID\OpenClosedPrinciple\Product.cs" />
+    <Compile Include="SOLID\SingleResponsibilityPrinciple\IUser.cs" />
     <Compile Include="SOLID\SingleResponsibilityPrinciple\Journal.cs" />
   </ItemGroup>
   <ItemGroup>

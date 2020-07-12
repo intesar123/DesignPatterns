@@ -27,7 +27,7 @@ namespace FluentBuilderInheritanceWithRecursiveGenerics
         }
     }
     //Suppose that we got some requirement after some time that we've to add job info so by
-    //following open-closed loop principle we can't modify above class so here we have to create another builder here
+    //following open-closed loop principle we can't modify above class so here we have to create another builder
     public class PersonJobBuilder: PersonInfoBuilder
     {
         public PersonJobBuilder WorkAs(string Position)
@@ -45,7 +45,7 @@ namespace FluentBuilderInheritanceWithRecursiveGenerics
              so unable to chain WorkAs() method, the problem is return type of both the methods **/
             //builder.Call("Intesar").WorkAs
 
-            //-- builder.WorkAs("Developer").Call("Intesar"); // didn't got its
+            //-- builder.WorkAs("Developer").Call("Intesar"); // didn't got it
 
             var me = PersonNew.New.Call("Intesar Alam").WorkAs("Developer").Build();
             Console.WriteLine(me);
