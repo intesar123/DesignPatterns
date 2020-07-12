@@ -75,6 +75,26 @@ namespace DesignPatterns
             {
                 Console.WriteLine($"-{product.name} is is green");
             }
+
+            //without OCP
+            Console.WriteLine("----without OCP");
+            Employee employee = new Employee(1, "John","Permanent");
+            string value = employee.ToString();
+            Console.WriteLine("Employee {0} Bonus {1}", employee.ToString(), employee.calculateBonus(10000));
+
+            Employee employee2 = new Employee(1, "Jason", "Contract");
+            value = employee2.ToString();
+            Console.WriteLine("Employee {0} Bonus {1}", employee2.ToString(), employee2.calculateBonus(10000));
+            //with OCP
+            Console.WriteLine("----with OCP");
+            EmolyeeNew  employeeNew = new PermanentEmployee(1, "John");
+            value = employee.ToString();
+            Console.WriteLine("Employee {0} Bonus {1}", employeeNew.ToString(), employeeNew.calculateBonus(10000));
+
+            EmolyeeNew employeeNew2 = new ContractEmployee(1, "Jason");
+            value = employee2.ToString();
+            Console.WriteLine("Employee {0} Bonus {1}", employeeNew2.ToString(), employeeNew2.calculateBonus(10000));
+
             #endregion
 
             #region 3 Liskov substitution principle
