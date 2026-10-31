@@ -1,5 +1,20 @@
 ﻿using System.Net.Security;
-
+// Singleton with lazy initialization and thread safety
+public class LazySingleton
+{
+    private static readonly Lazy<LazySingleton> _instance = new Lazy<LazySingleton>(() => new LazySingleton());
+    private LazySingleton()
+    {
+        // Private constructor to prevent instantiation from outside
+        Console.WriteLine("LazySingleton instance created.");
+    }
+    public static LazySingleton Instance => _instance.Value;
+    public void DoSomething()
+    {
+        Console.WriteLine("LazySingleton instance is doing something.");
+    }
+}
+// This is a simple implementation of the Singleton design pattern in C#.
 public class Singleton
 {
     private static Singleton _instance;
@@ -59,6 +74,36 @@ public class Program
         //     {
         //         _instance = null;
         //     }
+        // }
+
+        LazySingleton.Instance.DoSomething();
+        // destroy the lazy singleton instance
+        // How can the LazySingleton instance be destroyed in this implementation?
+        // Answer: Similar to the Singleton implementation, the LazySingleton instance cannot be destroyed
+        // because the constructor is private and there is no method provided to reset or nullify the instance.
+        // If you want to allow the LazySingleton instance to be destroyed, you could add a method
+        // to reset the instance, like this:
+        // public static void ResetInstance()
+        // {
+        //     _instance = new Lazy<LazySingleton>(() => new LazySingleton());
+        // }
+
+        //Count the number of instances created for both Singleton and LazySingleton
+        // How can we count the number of instances created for both Singleton and LazySingleton?
+        // Answer: We can add a static counter variable in both Singleton and LazySingleton classes
+        // and increment it in the constructor. For example:
+        // In Singleton class:
+        // private static int _instanceCount = 0;
+        // In the constructor:
+        // _instanceCount++;
+        // In LazySingleton class:
+        // private static int _instanceCount = 0;
+        // In the constructor:
+        // _instanceCount++;
+        // Then we can add a public static method to get the instance count:
+        // public static int GetInstanceCount()
+        // {
+        //     return _instanceCount;
         // }
     }
 }

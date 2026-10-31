@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
-VisualStudioVersion = 18.10.12306.391 oobstable
+VisualStudioVersion = 18.10.12306.391
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solid", "DesignPatterns\Solid.csproj", "{22B977BB-B0AF-4999-AAC6-EAB8E09773D6}"
 EndProject
@@ -11,11 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilder", "FluentBuil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilderInheritanceWithRecursiveGenerics", "FluentBuilderInheritanceWithRecursiveGenerics\FluentBuilderInheritanceWithRecursiveGenerics.csproj", "{6510016D-B532-4228-BBCD-52BB329F0EA7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Factory", "Factory\Factory.csproj", "{23BE34E9-89E4-44EA-8D34-D2D816F140D5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIP", "DIP\DIP.csproj", "{F01ED858-626B-4ED3-ABA4-9FC6993F9F24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{DAFAD031-B4FB-4440-BAAB-510853E3C796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Factory", "Factory\Factory.csproj", "{1F5B8976-C1E6-4969-B9E2-0629B2C15DFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,6 @@ Global
 		{6510016D-B532-4228-BBCD-52BB329F0EA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6510016D-B532-4228-BBCD-52BB329F0EA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6510016D-B532-4228-BBCD-52BB329F0EA7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{23BE34E9-89E4-44EA-8D34-D2D816F140D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{23BE34E9-89E4-44EA-8D34-D2D816F140D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{23BE34E9-89E4-44EA-8D34-D2D816F140D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{23BE34E9-89E4-44EA-8D34-D2D816F140D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F01ED858-626B-4ED3-ABA4-9FC6993F9F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F01ED858-626B-4ED3-ABA4-9FC6993F9F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F01ED858-626B-4ED3-ABA4-9FC6993F9F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,10 @@ Global
 		{DAFAD031-B4FB-4440-BAAB-510853E3C796}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAFAD031-B4FB-4440-BAAB-510853E3C796}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAFAD031-B4FB-4440-BAAB-510853E3C796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F5B8976-C1E6-4969-B9E2-0629B2C15DFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F5B8976-C1E6-4969-B9E2-0629B2C15DFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F5B8976-C1E6-4969-B9E2-0629B2C15DFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F5B8976-C1E6-4969-B9E2-0629B2C15DFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
